@@ -1,0 +1,19 @@
+name: Deploy Website
+on:
+  push:
+    branches:
+      - main
+jobs:
+  web-deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the latest code
+        uses: actions/checkout@v4
+      - uses: actions/setup-node@main
+      - name: 📂 Sync files 
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.DEMO_SERVER }}
+          username: ${{ secrets.DEMO_USERNAME }}
+          password: ${{ secrets.DEMO_PASS }}
