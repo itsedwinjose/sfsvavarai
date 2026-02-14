@@ -21,9 +21,9 @@
 <div class="topbar py-2 text-white">
   <div class="container d-flex justify-content-between align-items-center">
     <div>
-      <i class="bi bi-telephone"></i> +91 98765 43210
+      <i class="bi bi-telephone"></i> +91 000000000
       &nbsp;&nbsp;
-      <i class="bi bi-envelope"></i> info@school.com
+      <i class="bi bi-envelope"></i> info@vavarai.com
     </div>
     <div>
       <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>

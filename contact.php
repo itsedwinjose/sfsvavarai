@@ -13,8 +13,8 @@
       <div class="col-md-6">
         <h4 class="fw-bold text-primary">Contact Details</h4>
         <p><b>Address:</b> Dummy Address, Tamil Nadu</p>
-        <p><b>Phone:</b> +91 98765 43210</p>
-        <p><b>Email:</b> info@school.com</p>
+        <p><b>Phone:</b> +91 00000000</p>
+        <p><b>Email:</b> info@vavarai.com</p>
       </div>
 
       <div class="col-md-6">

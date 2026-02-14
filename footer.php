@@ -23,8 +23,8 @@
       <div class="col-md-4">
         <h5 class="fw-bold">Contact</h5>
         <p><i class="bi bi-geo-alt"></i> School Address, Tamil Nadu, India</p>
-        <p><i class="bi bi-telephone"></i> +91 98765 43210</p>
-        <p><i class="bi bi-envelope"></i> info@school.com</p>
+        <p><i class="bi bi-telephone"></i> +91 000000000</p>
+        <p><i class="bi bi-envelope"></i> info@vavarai.com</p>
       </div>
     </div>
 
