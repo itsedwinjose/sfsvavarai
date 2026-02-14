@@ -52,7 +52,7 @@
         <li class="nav-item"><a class="nav-link" href="activities.php">Activities</a></li>
         <li class="nav-item"><a class="nav-link" href="facilities.php">Facilities</a></li>
         <li class="nav-item"><a class="nav-link" href="news-events.php">News & Events</a></li>
-        <li class="nav-item"><a class="nav-link" href="gallery.php">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://gallery.stfrancishssvavarai.com">Gallery</a></li>
         <li class="nav-item"><a class="nav-link" href="affiliation.php">Affiliation</a></li>
         <li class="nav-item"><a class="nav-link" href="alumni.php">Alumni</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
