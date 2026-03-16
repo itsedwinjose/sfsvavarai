@@ -134,11 +134,11 @@
       
       <div class="col-md-6">
         <h3 class="fw-bold text-primary">Address</h3>
-        <p class="mb-1">School Name</p>
-        <p class="mb-1">Dummy Street, Dummy City</p>
+        <p class="mb-1">St. Francis Higher Secondary School</p>
+        <p class="mb-1">Vavarai, S. T. Mankad - 629172</p>
         <p class="mb-1">Tamil Nadu, India</p>
-        <p class="mb-1"><b>Phone:</b> +91 98765 43210</p>
-        <p class="mb-0"><b>Email:</b> info@school.com</p>
+        <p class="mb-1"><b>Phone:</b>  04651 - 240495</p>
+        <p class="mb-0"><b>Email:</b> stfrancishssvavarai@gmail.com</p>
       </div>
 
       <div class="col-md-6">

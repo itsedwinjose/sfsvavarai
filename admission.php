@@ -1,167 +1,206 @@
 <?php include("header.php"); ?>
 
-<section class="py-5 bg-light text-center">
+<section class="py-5 bg-light text-center border-bottom">
   <div class="container">
-    <h1 class="fw-bold text-primary">Admission Information</h1>
-    <p class="lead">Parents seeking admission for their children are requested to read the following guidelines carefully.</p>
+    <h1 class="fw-bold text-primary mb-3">Admission Information</h1>
+    <p class="lead mb-0">
+      Parents seeking admission for their children are requested to read the following guidelines carefully.
+    </p>
   </div>
 </section>
 
 <section class="py-5">
   <div class="container">
-    <div class="row g-4">
 
-<?php
-$sections = [
+    <!-- Quick Highlights -->
+    <div class="row g-4 mb-5">
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm h-100 text-center p-4">
+          <div class="card-body">
+            <h5 class="fw-bold text-primary">School Timing</h5>
+            <p class="mb-0">Monday to Friday<br>9:00 AM to 3:30 PM</p>
+          </div>
+        </div>
+      </div>
 
-[
-"title" => "School Schedule",
-"desc" => "The school functions from Monday to Friday. Classes begin at 9:00 AM and end at 3:30 PM. Special activities, sports practice and club activities are conducted in the afternoon. Students are expected to reach school before the morning assembly."
-],
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm h-100 text-center p-4">
+          <div class="card-body">
+            <h5 class="fw-bold text-primary">Minimum Attendance</h5>
+            <p class="mb-0">Students must maintain <strong>95%</strong> attendance for academic progress.</p>
+          </div>
+        </div>
+      </div>
 
-[
-"title" => "Attendance",
-"desc" => "எல்லா மாணவர்களும் கல்வி ஆண்டில் முன்னேற்றத்திற்கு பரிசீலிக்கப்பட குறைந்தபட்சம் 95% வருகை தக்கதை இணைக்க வேண்டும். 15 நாட்கள் மற்றும் அதற்கு மேலான அனுமதியற்ற விடுப்பு மாணவரின் பெயரை பதிவுப்பட்டியலில் இருந்து நீக்கத்திற்கு வழிவகுக்கும். ஒவ்வொரு விடுப்பு, தாமதம், அனுமதி, கோரிக்கை, விளக்கம் மற்றும் பிற விதிவிலக்குகள் அலுவலகத்தில் இருந்து ரூ. 5 செலவில் வாங்கக்கூடிய படிவங்களில் பதிவு செய்யப்பட வேண்டும். படிவங்களின் ஜெராக்ஸ் நகல்கள் ஏற்கப்பட மாட்டாது. அவசர நடவடிக்கை இருந்தாலும், தகுந்த அனுமதி பெற்ற நபர் இல்லாமை இல்லாத வரை எந்த மாணவரும் வீட்டிற்கு அனுப்பப்பட மாட்டார். நோயினால் (ஐந்து நாட்களுக்கு அதிகமான) நீண்ட விடுப்பின் போது மருத்துவ சான்றிதழ் வழங்கப்பட வேண்டும். முன்கூட்டியே திட்டமிடப்பட்ட விடுப்புகள் க்காக, விடுப்பு படிவங்களை முன்பே சமர்ப்பிக்க வேண்டும்."
-],
-
-[
-"title" => "General Rules",
-"desc" => "பொது விதிகள்
-மாணவர்கள் 08.15 மணிக்கு எச்சரிக்கை மணி முடிந்ததற்க்குள் பள்ளிக்கு வர வேண்டும். பள்ளியின் கதவுகள் 08.20 முதல் 15.30 வரை மூடப்பட்டிருக்கும்.
-
-மாணவர்கள் தங்கள் பள்ளி டையரியை ஒவ்வொரு நாளும் எடுத்துக் கொண்டு வர வேண்டும்.
-
-ஒழுங்கற்ற வருகை, பள்ளி பணிகளில் தானாக இணங்காத சாஹித்யம், படிப்பில் ஆர்வமின்மை, அநீதிமிகுந்த நடத்தை, obscene சொற்கள் பயன்படுத்துதல் அல்லது பள்ளியின் உள்ளே அல்லது வெளியே கடுமையான தவறான நடத்தை ஆகியவை மாணவரை பள்ளி பதிவுகள் யை நீக்கச் செய்யக் கூடிய போதுமான காரணங்கள் ஆகும்.
-
-பள்ளி சொத்துகளுக்கும் மற்ற மாணவர்களுக்கும் ஏற்பட்ட எந்த சேதத்தையும் சரி செய்ய வேண்டும்.
-
-எந்தவொரு தொற்றுநோயோ பரிமாற்றக்கூடிய நோயோ உள்ள மாணவர்களும் வகுப்பில் வர அனுமதிக்கப்பட மாட்டார்கள்.
-
-பள்ளி புத்தகங்களைத் தவிர வேறு எந்த புத்தகங்களையும் பள்ளிக்குக் கொண்டு வரக்கூடாது.
-
-பள்ளிப்பாடங்கள், அறிக்கைக் கார்டு மற்றும் மாதாந்திர ஆய்வு (டயரி) பெற்றோரால் அல்லது காப்பாளர் கையொப்பமிடப்பட வேண்டும்.
-
-மனிதார்த்த காரணங்களுக்கே விடுப்பு வழங்கப்படுகிறது, அதற்காகவும் காப்பாளர்களால் விண்ணப்பம் செய்யப்பட வேண்டும்.
-
-மருத்துவச் சான்றிதழால் ஆதரிக்கப்படும் நோயின்பற்றும் காரணங்களை தவிர, இறுதி பரீட்சைகளுக்காக வராமற்போன மாணவர்கள் அந்தத் துறையில் தோல்வியடைவதாக கருதப்படுவார்கள்.
-
-சிறப்பு சூழ்நிலைகளில், விடுப்பு விண்ணப்பம் நேரடியாக தலைமை ஆசிரியரிடம் சமர்ப்பிக்கலாம். 
-
-கல்வி ஆண்டின் முடிவில் முடிவுகள் அறிவிப்பு பலகையிலும் பள்ளி இணையதளத்திலும் அறிவிக்கப்படும்.
-
-ஏதேனும் வகுப்பில் தோல்வியடைந்த மாணவனுக்கு/மாணவியுக்கு அதே வகுப்பில் தொடர ஒரு வாய்ப்பு வழங்கப்படும், அதிலும் மேம்பாடு இல்லையெனில் அவர்/அவள் பள்ளியில் தொடர அனுமதிக்கப்பட மாட்டார்.
-
-மாணவர்களின் தனிப்பட்ட சுகாதாரம்: யூனிபாரத்தை சுத்தமாக, முழுமையாக மற்றும் நன்கு அணிய வேண்டும்.
-
-விநாடிகள் வகுப்பு V வரை அணிய அனுமதிக்கப்படாது. வகுப்பு VI மற்றும் அதற்கு மேல் மாணவர்கள் எளிய வாட்சிகளை (அலங்கார, டிஜிட்டல் மற்றும் மின்னணு இல்லாதவை) பயன்படுத்தலாம். 
-
-மாணவர்கள் தங்க ஆபரணங்களை அணியக்கூடாது. பொருட்கள்/விளையாட்டு பொருட்களை பள்ளிக்கு கொண்டு வரக்கூடாது. மாணவர்களுக்கு பண பரிமாற்றங்கள் அல்லது பிற ஒப்பந்தங்கள் அனுமதிக்கப்படவில்லை.
-
-மாணவர்கள் தங்களுடைய சொத்துகளின் பாதுகாப்பிற்குப் பொறுப்பானவர்கள். மாணவரின் சொத்துகள் இழந்தால் பள்ளி எந்தவிதப் பொறுப்பையும் ஏற்காது. அடையாள அட்டை, பேட்ஜ், டைரி அல்லது கடனாளி பதிவு இழந்தால், புதிய ஒன்றுக்கு ரூ. 200 கட்டணம் வசூலிக்கப்படும். முன்னேற்ற அறிக்கையை இழந்தால் ரூ. 1000 காசு வசூலிக்கப்படும்.
-
-மாணவர்களின் ஒழுங்கும் ஒழுக்கமும், கடின உழைப்பு மற்றும் முறையான கற்றல் பழக்கத்தை அவர்களுக்குள் வளர்ப்பதில் பெற்றோர்கள் பள்ளி அதிகாரிகளுக்கு ஒத்துழைக்க வேண்டும்.
-
-பள்ளியிடமிருந்து வரும் தகவலுக்காக மாணவர்களின் டைரியை பெற்றோர்கள் தொடர்ந்து பரிசீலிக்க வேண்டும்; மேலும் பிள்ளைகள் குறிப்பிட்ட வீட்டுப்பாடங்களை செய்து வருகிறார்களா என்பதை அவர்களின் நோட்டுப் புத்தகங்களில் சரிபார்க்க வேண்டும்.
-
-முகவரி அல்லது மொபைல் எண்ணில் மாற்றம் ஏற்பட்டால் பெற்றோர்கள் அதைப் பள்ளிக்கு தெரிவித்துக்கொள்ள வேண்டும்.
-
-முதன்மையரின் அனுமதியின்றி குறிப்பிடப்பட்ட நேரத்தைத் தவிர, ஆசிரியர்களை சந்திப்பதற்கு யாருக்கும் அனுமதி இல்லை.[eos]
-
-ஏதேனும் وضுத்தம் பெறுவதற்காக, ஆசிரியர்களை அவர்களது மொபைல் மூலம் தொடர்புகொள்வது அனுமதிக்கப்படாது.[eos]
-
-பள்ளி வளாகத்தில் நுழைவு பணியாளர்களுக்கும் மாணவர்களுக்கும் மட்டுமே இயலும். பெற்றோர்கள்/காப்பாளர்கள் தங்கள் குழந்தைகளை சந்திப்பது அல்லது பள்ளி வளாகத்தில் நுழைவது அதிகாரிகளின் அனுமதியுடன் மட்டுமே செய்யலாம்.[eos]
-
-பெற்றோர்கள்/காப்பாளர்கள் செய்யும் அனைத்து தொடர்புகளும் (விண்ணப்பம், புகார்) முதன்மையரிடம் சமர்ப்பிக்கப்பட வேண்டும், வகுப்பு ஆசிரியரிடம் அல்ல, மேலும் பள்ளியிலிருந்து பெற்றோருக்கு செல்லும் அனைத்து கடிதங்களும் முதன்மையரின் வழியாக செல்லும்.[eos]
-
-டிஃபின் பெட்டிகள், குடைகள் போன்ற அனைத்து பொருட்களையும் பெயர், வகுப்பு மற்றும் பிரிவுடன் குறிக்க வேண்டும். இதனால் பொருட்கள் உரிய உரிமையாளர்களுக்கு திருப்பி தர வசதி ஏற்படும்.[eos]
-
-கருத்துக்கமரும் புகார்களை அதிகாரிகளிடம் தெரிவிக்கலாம்.[eos] 
-
-காப்பாளர்கள் தங்களது பிள்ளைகளின் முன்னிலையில் பணியாளர்களைப் பற்றி தேவையற்ற கருத்துக்கள் சொல்லாமல் இருக்க வேண்டும்.[eos]
-
-பெற்றோர் சங்கமம் அழைக்கப்பட்டால் அதில் கலந்து கொள்ள வேண்டும்.[eos]
-
-பெற்றோர்/காப்பாளர்கள் எப்போதும் பள்ளிக்கு வரலாம், தங்களது பிள்ளைகளின் வளர்ச்சியை கண்காணிக்க, ஆனால் அது பள்ளியின் வழக்கமான வேலைக்கே தடையாக இருக்கக்கூடாது.[eos]
-
-குறிப்பிட்ட கல்வியாண்டிற்கான முழு கட்டணமும் செலுத்தப்படாவிடில், மாற்றுச் சான்றிதழ் (Transfer Certificate) கோரிக்கையின் அடிப்படையில் வழங்கப்படாது.[eos]
-
-ஒருமுறை கட்டணம் செலுத்தப்பட்டால், சேர்க்கை ரத்து செய்யப்பட்டாலும் அது மீட்டெடுக்கப்பட மாட்டாது.[eos]
-
-ஆவணங்கள் அல்லது அனுமதிக்கான விண்ணப்பங்கள் தேவைக்கு குறைந்தது 5 நாட்களுக்கு முன்னதாக பள்ளி அலுவலகத்திற்கு செல்ல வேண்டும்.
-
-பள்ளியின் மேம்பாட்டிற்காக பெற்றோர்கள் பரிந்துரைகள் வழங்கலாம். உங்கள் பரிந்துரைகள் பள்ளி அதிகாரிகளால் கவனமாக பின்பற்றப்படும்.
-
-பெற்றோர்களை விதிகளை கவனமாகப் படித்து அவை பின்பற்றப்படுகிறதா என்பதை உறுதிப்படுத்துமாறு கேட்டுக் கொள்கிறோம். மாணவர்கள் மற்றும் பள்ளியின் நலனுக்கான காரணமாக விதிகளில் மாற்றங்கள் செய்யப்படலாம் என்பதை கவனிக்கவும்.
-
-விடுப்பு படிவங்கள் அடுத்த நாளே வகுப்புரு ஆசிரியரிடம் சமர்ப்பிக்கப்பட வேண்டும் மற்றும் 103 பக்கத்தில் நாளேற்றத்தில் குறியிட வேண்டும்.
-
-மாணவர்கள் தாமதமாக வருதல், சரியற்ற உடை, விடுப்பு மற்றும் ஒழுங்கற்ற நடவடிக்கைகள் போன்றவற்றுக்கான பதிவு 101 முதல் 104 பக்கங்களை பெற்றோர்கள் தொடர்ந்து ஆய்வு செய்து கையொப்பம் தர வேண்டும்."
-],
-
-[
-"title" => "Examination and Promotion",
-"desc" => "பள்ளி ஒரு கல்வியாண்டில் மூன்று மிட்-டெர்ம், இரண்டு டெர்ம் மற்றும் ஆண்டு பரீட்சைகளைக் நடத்துகிறது. இதற்கு மேலாக, சோதனைத் தாள்கள் ஒழுங்கான இடைவெளிகளில் நடத்தப்படும். அனைத்து பரீட்சைகளிலும் மற்றும் சோதனைகளிலும் பங்கேற்பு கட்டாயம்.
-
-கிளாஸ் I முதல் V வரையிலான மாணவர்களின் மிட்-டெர்ம் மற்றும் டெர்ம் பரீட்சைகளில் பெறப்பட்ட மொத்த மதிப்பெண்களின் அடிப்படையில் விளம்பரங்கள் வழங்கப்படுகின்றன. கிளாஸ் VI முதல் ஆண்டு பரீட்சையின் அடிப்படையில், ஒவ்வொரு பாடத்திற்கும் தனித்தனி குறைந்தபட்ச மதிப்பெண் உள்ளடங்கிய முன்னேற்றம் வழங்கப்படும். making a difference Bethany Navajeevan 3 4
-
-ஆண்டின் சில பாடங்களில் தோல்வியுற்ற மாணவர் பள்ளியில் இருந்து விலகக் கேட்கப்படும்.
-
-கட்டணங்கள் தெரிவிக்கப்படாத மாணவர்களின் முன்னேற்றம் நிலைநிறுத்தப்படும்.
-
-முழு கட்டணமும் செலுத்தப்படாமல் இருப்பின் மாற்று சான்றிதழ் வழங்கப்படமாட்டாது.
-
-முதல்வர், மாணவர்கள் பள்ளியின் ஒழுங்குப்படும் நடைமுறைகளை பின்பற்றவில்லை அல்லது முன்னேற்றம் காட்ட முடியவில்லை என்றால், பெற்றோர்களிடம் தங்கள் குழந்தைகளை ஓரிரு செய்யுமாறு கேட்கலாம்."
-],
-
-[
-"title" => "School Rules and Discipline",
-"desc" => "Students must follow the code of conduct of the school. Any form of misconduct, bullying or damage to school property will result in disciplinary action."
-],
-
-[
-"title" => "Competitive Exams",
-"desc" => "The school encourages students to participate in competitive examinations such as Olympiads, scholarship exams and talent search programs to improve academic excellence."
-],
-
-[
-"title" => "Homework & Snacks Schedule",
-"desc" => "Daily homework is assigned to reinforce classroom learning. Younger students are provided short breaks for snacks and recreation during school hours."
-],
-
-[
-"title" => "Online Examination",
-"desc" => "In special circumstances, examinations may be conducted online using secure digital platforms. Students will receive guidelines in advance for participating in online exams."
-],
-
-[
-"title" => "Computer Government Certificate Exam",
-"desc" => "Students have the opportunity to appear for government approved computer certificate examinations which enhance their digital skills and provide recognized certification."
-],
-
-[
-"title" => "School Uniform",
-"desc" => "Students must wear the prescribed school uniform on all working days. Uniform helps maintain discipline and equality among students. Specific uniforms are prescribed for regular days and sports days."
-],
-
-[
-"title" => "School Calendar",
-"desc" => "The academic calendar includes details of holidays, examination schedules, events, sports day, annual day and parent-teacher meetings. Parents are advised to follow the school calendar regularly."
-]
-
-];
-
-foreach($sections as $sec){
-echo '
-<div class="col-md-6">
-  <div class="card shadow-sm p-4 h-100 border-0">
-    <h4 class="fw-bold text-primary">'.$sec["title"].'</h4>
-    <p>'.$sec["desc"].'</p>
-  </div>
-</div>';
-}
-?>
-
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm h-100 text-center p-4">
+          <div class="card-body">
+            <h5 class="fw-bold text-primary">Important Note</h5>
+            <p class="mb-0">Fees once paid will not be refunded. Transfer Certificate will be issued only after full fee clearance.</p>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <?php
+    $sections = [
+
+      [
+        "title" => "School Schedule",
+        "desc" => "
+          <p>The school functions from Monday to Friday.</p>
+          <ul class='mb-0'>
+            <li>Class timing: 9:00 AM to 3:30 PM</li>
+            <li>Students should arrive before the morning assembly</li>
+            <li>Special activities and sports may be conducted in the afternoon</li>
+          </ul>
+        "
+      ],
+
+      [
+        "title" => "Attendance",
+        "desc" => "
+          <ul class='mb-0'>
+            <li>எல்லா மாணவர்களும் கல்வி ஆண்டில் முன்னேற்றத்திற்கு பரிசீலிக்கப்பட குறைந்தபட்சம் 95% வருகை தக்கவைப்படுத்த வேண்டும்.</li>
+            <li>15 நாட்கள் மற்றும் அதற்கு மேலான அனுமதியற்ற விடுப்பு மாணவரின் பெயரை பதிவுப்பட்டியலில் இருந்து நீக்கத்திற்கு வழிவகுக்கும்.</li>
+            <li>ஒவ்வொரு விடுப்பு, தாமதம், அனுமதி, கோரிக்கை மற்றும் விளக்கம் அலுவலகத்தில் கிடைக்கும் படிவங்களில் பதிவு செய்யப்பட வேண்டும்.</li>
+            <li>படிவங்களின் ஜெராக்ஸ் நகல்கள் ஏற்கப்பட மாட்டாது.</li>
+            <li>நோயினால் ஐந்து நாட்களுக்கு மேலான நீண்ட விடுப்புக்கு மருத்துவச் சான்றிதழ் கட்டாயம்.</li>
+            <li>முன்கூட்டியே திட்டமிடப்பட்ட விடுப்புகளுக்காக, விடுப்பு படிவங்கள் முன்பே சமர்ப்பிக்கப்பட வேண்டும்.</li>
+          </ul>
+        "
+      ],
+
+      [
+        "title" => "General Rules",
+        "desc" => "
+          <ul class='mb-0'>
+            <li>மாணவர்கள் 08.15 மணிக்கு முன் பள்ளிக்கு வர வேண்டும்.</li>
+            <li>பள்ளி டையரியை ஒவ்வொரு நாளும் எடுத்துக் கொண்டு வர வேண்டும்.</li>
+            <li>ஒழுங்கற்ற வருகை, பள்ளி பணிகளில் அக்கறையின்மை, தவறான நடத்தை ஆகியவை பள்ளி பதிவிலிருந்து நீக்கத்திற்கு காரணமாகலாம்.</li>
+            <li>பள்ளி சொத்துகளுக்கு அல்லது மற்ற மாணவர்களின் சொத்துகளுக்கு சேதம் ஏற்பட்டால் அதை ஈடு செய்ய வேண்டும்.</li>
+            <li>தொற்றுநோயுள்ள மாணவர்கள் வகுப்பில் வர அனுமதிக்கப்பட மாட்டார்கள்.</li>
+            <li>பள்ளிப் புத்தகங்களைத் தவிர வேறு புத்தகங்கள் பள்ளிக்கு கொண்டு வரக்கூடாது.</li>
+            <li>அறிக்கைக் கார்டு மற்றும் டையரியில் பெற்றோர் கையொப்பம் இட வேண்டும்.</li>
+            <li>மனிதாபிமான காரணங்களுக்கே விடுப்பு வழங்கப்படும்.</li>
+            <li>மருத்துவச் சான்றிதழ் இல்லாமல் இறுதி பரீட்சையில் வராதவர்கள் தோல்வியடைந்ததாக கருதப்படுவர்.</li>
+            <li>கல்வியாண்டு முடிவில் முடிவுகள் அறிவிப்பு பலகையிலும் பள்ளி இணையதளத்திலும் வெளியிடப்படும்.</li>
+            <li>தனிப்பட்ட சுகாதாரத்திற்காக யூனிபார்மை சுத்தமாக அணிய வேண்டும்.</li>
+            <li>மாணவர்கள் தங்க ஆபரணங்கள் அணியக்கூடாது.</li>
+            <li>விளையாட்டு பொருட்கள் அல்லது தேவையற்ற பொருட்களை பள்ளிக்கு கொண்டு வரக்கூடாது.</li>
+            <li>அடையாள அட்டை, பேட்ஜ், டைரி போன்றவை இழந்தால் அபராதம் வசூலிக்கப்படும்.</li>
+            <li>பெற்றோர் மாணவர்களின் டைரியை தொடர்ந்து பரிசீலிக்க வேண்டும்.</li>
+            <li>முகவரி அல்லது மொபைல் எண்ணில் மாற்றம் ஏற்பட்டால் பள்ளிக்கு தெரியப்படுத்த வேண்டும்.</li>
+            <li>முதல்வரின் அனுமதியின்றி ஆசிரியர்களை சந்திக்க அனுமதி இல்லை.</li>
+            <li>ஆசிரியர்களை அவர்களது மொபைல் எண்ணில் தொடர்புகொள்வது அனுமதிக்கப்படாது.</li>
+            <li>பெற்றோர்/காப்பாளர்கள் அதிகாரிகளின் அனுமதியுடன் மட்டுமே பள்ளி வளாகத்தில் நுழையலாம்.</li>
+            <li>அனைத்து விண்ணப்பங்களும், புகார்களும் முதல்வரிடம் சமர்ப்பிக்கப்பட வேண்டும்.</li>
+            <li>டிஃபின் பெட்டி, குடை போன்றவற்றில் பெயர், வகுப்பு, பிரிவு குறிப்பிடப்பட வேண்டும்.</li>
+            <li>பெற்றோர் சங்கமம் அழைக்கப்பட்டால் கலந்து கொள்ள வேண்டும்.</li>
+            <li>முழு கட்டணம் செலுத்தப்படாவிட்டால் மாற்றுச் சான்றிதழ் வழங்கப்படாது.</li>
+            <li>ஒருமுறை செலுத்திய கட்டணம் திருப்பி வழங்கப்பட மாட்டாது.</li>
+            <li>ஆவணங்களுக்கு விண்ணப்பம் குறைந்தது 5 நாட்களுக்கு முன் அலுவலகத்தில் சமர்ப்பிக்க வேண்டும்.</li>
+          </ul>
+        "
+      ],
+
+      [
+        "title" => "Examination and Promotion",
+        "desc" => "
+          <ul class='mb-0'>
+            <li>ஒரு கல்வியாண்டில் மூன்று மிட்-டெர்ம், இரண்டு டெர்ம் மற்றும் ஆண்டு பரீட்சைகள் நடத்தப்படும்.</li>
+            <li>இதற்கு மேலாக சோதனைத் தாள்கள் ஒழுங்கான இடைவெளிகளில் நடத்தப்படும்.</li>
+            <li>அனைத்து பரீட்சைகளிலும் பங்கேற்பு கட்டாயம்.</li>
+            <li>கிளாஸ் I முதல் V வரை மொத்த மதிப்பெண்களின் அடிப்படையில் முன்னேற்றம் வழங்கப்படும்.</li>
+            <li>கிளாஸ் VI முதல் ஒவ்வொரு பாடத்திற்கும் தனித்தனி குறைந்தபட்ச மதிப்பெண் தேவைப்படும்.</li>
+            <li>சில பாடங்களில் தொடர்ந்து தோல்வியடையும் மாணவர்கள் பள்ளியில் இருந்து விலகச் சொல்லப்படலாம்.</li>
+            <li>கட்டண நிலுவை உள்ள மாணவர்களின் முன்னேற்றம் தடுக்கப்படலாம்.</li>
+            <li>முழு கட்டணம் செலுத்தப்படாமல் இருந்தால் மாற்றுச் சான்றிதழ் வழங்கப்படாது.</li>
+          </ul>
+        "
+      ],
+
+      [
+        "title" => "School Rules and Discipline",
+        "desc" => "
+          <ul class='mb-0'>
+            <li>Students must maintain discipline inside and outside the classroom.</li>
+            <li>Bullying, abusive language and damage to school property are strictly prohibited.</li>
+            <li>Respect towards teachers, staff and fellow students is compulsory.</li>
+          </ul>
+        "
+      ],
+
+      [
+        "title" => "Competitive Exams",
+        "desc" => "
+          <p class='mb-0'>The school encourages students to participate in Olympiads, scholarship examinations and other talent search programs to improve academic excellence and confidence.</p>
+        "
+      ],
+
+      [
+        "title" => "Homework & Snacks Schedule",
+        "desc" => "
+          <p class='mb-0'>Daily homework is assigned to reinforce classroom learning. Younger students are also provided short breaks for snacks and recreation during school hours.</p>
+        "
+      ],
+
+      [
+        "title" => "Online Examination",
+        "desc" => "
+          <p class='mb-0'>In special situations, examinations may be conducted online using approved digital platforms. Instructions will be shared in advance.</p>
+        "
+      ],
+
+      [
+        "title" => "Computer Government Certificate Exam",
+        "desc" => "
+          <p class='mb-0'>Students may appear for government-recognized computer certificate examinations to improve digital literacy and technical skills.</p>
+        "
+      ],
+
+      [
+        "title" => "School Uniform",
+        "desc" => "
+          <p class='mb-0'>Students must wear the prescribed school uniform on all working days. Separate uniforms may be prescribed for regular class days and sports days.</p>
+        "
+      ],
+
+      [
+        "title" => "School Calendar",
+        "desc" => "
+          <p class='mb-0'>The academic calendar includes holidays, exam schedules, school events, annual day, sports day and parent-teacher meetings.</p>
+        "
+      ]
+
+    ];
+    ?>
+
+    <div class="accordion shadow-sm" id="admissionAccordion">
+      <?php foreach($sections as $index => $sec){ ?>
+        <div class="accordion-item border-0 mb-3 rounded overflow-hidden shadow-sm">
+          <h2 class="accordion-header" id="heading<?php echo $index; ?>">
+            <button class="accordion-button <?php echo $index != 0 ? 'collapsed' : ''; ?> fw-bold text-primary"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse<?php echo $index; ?>"
+                    aria-expanded="<?php echo $index == 0 ? 'true' : 'false'; ?>"
+                    aria-controls="collapse<?php echo $index; ?>">
+              <?php echo $sec["title"]; ?>
+            </button>
+          </h2>
+          <div id="collapse<?php echo $index; ?>"
+               class="accordion-collapse collapse <?php echo $index == 0 ? 'show' : ''; ?>"
+               aria-labelledby="heading<?php echo $index; ?>"
+               data-bs-parent="#admissionAccordion">
+            <div class="accordion-body" style="line-height: 1.8; font-size: 15px;">
+              <?php echo $sec["desc"]; ?>
+            </div>
+          </div>
+        </div>
+      <?php } ?>
+    </div>
+
   </div>
 </section>
 

@@ -44,3 +44,14 @@ body {
   transform: translateY(-4px);
   transition: 0.3s;
 }
+
+.accordion-body ul {
+  padding-left: 1.2rem;
+  margin-bottom: 0;
+}
+.accordion-body li {
+  margin-bottom: 10px;
+}
+.accordion-button {
+  font-size: 1.05rem;
+}
