@@ -22,9 +22,9 @@
 
       <div class="col-md-4">
         <h5 class="fw-bold">Contact</h5>
-        <p><i class="bi bi-geo-alt"></i> School Address, Tamil Nadu, India</p>
-        <p><i class="bi bi-telephone"></i> +91 000000000</p>
-        <p><i class="bi bi-envelope"></i> info@vavarai.com</p>
+        <p><i class="bi bi-geo-alt"></i> St. Francis Higher Secondary School, </br>Vavarai, S. T. Mankad - 629172, </br>Tamil Nadu, India</p>
+        <p><i class="bi bi-telephone"></i> 04651 - 240495</p>
+        <p><i class="bi bi-envelope"></i> stfrancishssvavarai@gmail.com</p>
       </div>
     </div>
 

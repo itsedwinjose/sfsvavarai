@@ -21,9 +21,9 @@
 <div class="topbar py-2 text-white">
   <div class="container d-flex justify-content-between align-items-center">
     <div>
-      <i class="bi bi-telephone"></i> +91 000000000
+      <i class="bi bi-telephone"></i> 04651 - 240495
       &nbsp;&nbsp;
-      <i class="bi bi-envelope"></i> info@vavarai.com
+      <i class="bi bi-envelope"></i> stfrancishssvavarai@gmail.com
     </div>
     <div>
       <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>

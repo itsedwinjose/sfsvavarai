@@ -71,7 +71,7 @@
         <div class="card p-4 shadow-sm h-100">
           <h4 class="fw-bold text-primary">Motto</h4>
           <p>
-            "Dummy motto text goes here. Replace later."
+            "மாற்றத்தை உருவாக்குவது"
           </p>
         </div>
       </div>

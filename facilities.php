@@ -2,39 +2,100 @@
 
 <section class="py-5 bg-light text-center">
   <div class="container">
-    <h1 class="fw-bold text-primary">Facilities</h1>
-    <p>Dummy facilities details. Replace later.</p>
+    <h1 class="fw-bold text-primary">Our Facilities</h1>
+    <p class="lead">We provide modern infrastructure and facilities to support quality education and overall development of students.</p>
   </div>
 </section>
 
 <section class="py-5">
   <div class="container">
     <div class="row g-4">
+
       <?php
       $facilities = [
-        "Laboratory",
-        "Transport",
-        "Library",
-        "SMS Facilities",
-        "Class Rooms",
-        "Cricket Nets",
-        "Kids Park",
-        "Library"
+
+        [
+          "title" => "Chemistry lab",
+          "img" => "https://images.unsplash.com/photo-1581091012184-5c7a0f3e7c4c?auto=format&fit=crop&w=800&q=80",
+          "desc" => "மாணவர்கள் ஆசிரியர் குறிப்பிட்ட வழிமுறைகளைத் தவிர எந்த உபகரணங்களுக்கும் அல்லது ரசாயனங்களுக்கும் தொடக்க கூடாது.
+
+மாணவர்கள் ஆய்வகத்தில் உணவோ, பானமோ, அலங்காரப் பொருளோ பயன்படுத்தக்கூடாது அல்லது பல் சிப்பாரோ ஆகியவற்றை செய்யக்கூடாது. எந்தவொரு ஆய்வக செயல்பாடிலும் பங்கேற்ற பிறகு கைகளை நன்கு சுத்தமாக கழுவ வேண்டும்.
+
+மாணவர்கள் தொடர்புடைய ஆய்வக பாதுகாப்பு உபகரணங்களின் இடங்கள் மற்றும் செயல்முறை தொடர்பான பயிற்சியைப் பெறுவர்."
+        ],
+
+        [
+          "title" => "Physics lab",
+          "img" => "https://images.unsplash.com/photo-1570125909517-53cb21c89ff2?auto=format&fit=crop&w=800&q=80",
+          "desc" => "புவியியல் ஆய்வு实验ாலயம் என்பது புவியியல் பரிசோதனைகள் நடைபெறும் இடமாகும். ஒரு புவியியல் ஆய்வகம் ஒரு மாணவனுக்கு கொள்கையின் பொருத்தத்தை நிரூபிப்பதில் உதவுகிறது. இது மாணவர்களின் மனதில் பாடத்தின் அடிப்படை கருத்தை தெளிவாகக் கொண்டு வருகிறது. எமது மாணவர்கள் பரிசோதனைகளின் மெய்நிகர் அனுபவத்தை பெறுகின்றனர், மாணவர்கள் பெரும்பாலான நேரத்தை தங்கள் ஆய்வகம் மேசைகளில் தங்களுடைய சொந்த பரிசோதனைகளை செய்து செலவழிக்கின்றனர். பெரிய அளவிலான பரிசோதனைகளுக்காக அறையின் நடுப்பகுதியில் போதுமான இடம் உள்ளது. ஆய்வகம் சாதனைகளால் நன்றாகச் சூட்டப்பட்டுள்ளது, உதாரணமாக- மீட்டர் பாலங்கள், பேட்டரி நீக்கிகள், பொட்டென்சியோமீட்டர்கள், ஹூக் கருவி, இত্যாதிகள். "
+        ],
+
+        [
+          "title" => "Library",
+          "img" => "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=800&q=80",
+          "desc" => "புத்தகாலயம் அனைத்து வேலைநாட்களிலும் காலை 8.30 மணி முதல் பிற்பகல் 3.30 மணி வரை திறந்திருக்கும்.
+
+மாணவர்கள் சாத்தியமான வரை புத்தகாலய வசதிகளை பயன்படுத்துமாறு அறிவுறுத்தப்படுகிறார்கள்.
+
+புத்தகாலயத்தின் உள்ளே கடுமையான அமைதியை பின்பற்ற வேண்டும்.
+
+புத்தகாலய புத்தகங்களுக்கு எந்தவொரு சேதமும் நிகழ்க்க கூடாது.
+
+ஒரு புத்தகம் இழந்துவிட்டால் அல்லது சேதமடைந்தால், அந்தப் புத்தகத்திற்கு மாணவர் பொறுப்பானவர் மற்றும் ரூ. 500 அபராதம் உடன் அதை பதிலாக வழங்க வேண்டும்.
+
+ஒரு மாணவர் ஒரு புத்தகத்தை மூன்று நாட்களுக்கு மேல் வைத்துக் கொள்ள அனுமதிக்கப்படவில்லை. நடைமுறையான நாளில் புத்தகத்தை திருப்பிக்கொடுக்க தவறுபவர்களுக்கு, தினம் ஒன்றுக்கு ரூ. 10 அபராதம் விதிக்கப்படும்.
+
+மாணவர்கள் புத்தகங்களை பிறருக்கு இழுவாய் கொடுக்க அனுமதி இல்லை.
+
+பழைய புத்தகம் நல்ல நிலையில் திரும்ப வழங்கப்படாவிட்டால் புதிய புத்தகம் வழங்கப்படாது."
+        ],
+
+        [
+          "title" => "computer laboratory",
+          "img" => "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80",
+          "desc" => "கம்ப்யூட்டர் கற்குதல் நவீன கல்விக்கான முக்கியமான மற்றும் பயனுள்ள கருவியாக அறியப்படுகிறது. எங்கள் பள்ளியில் நெட்வర్క் வசதி கொண்ட 15 கம்ப்யூட்டர்களுடன் நன்கு சீரமைக்கப்பட்ட மற்றும் நன்கு பராமரிக்கப்பட்ட கம்ப்யூட்டர் பிரிவு உள்ளது. நன்கு சீரமைக்கப்பட்ட கம்ப்யூட்டர் ஆய்வகம், ஒவ்வொரு குழந்தையிலும் தொழில்நுட்பம் மற்றும் அதன் வேலைபாடு பற்றிய ஆழமான புரிதலை வளர்க்க உதவுகிறது."
+        ],
+
+        [
+          "title" => "Smart Classrooms",
+          "img" => "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80",
+          "desc" => "Spacious and well ventilated classrooms equipped with digital learning tools help create an interactive and engaging learning environment."
+        ],
+
+        [
+          "title" => "Biology",
+          "img" => "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80",
+          "desc" => "பார்வையும் பரிசோதனைகளும் கற்றலை மேலும் சுவாரஸ்யமாகவும் சிரிப்பூட்டியாகவும் மாற்றுகின்றன. பரிசோதனையின் மூலம் கற்றல் அறிவியல் கற்றதிற்கான சிறந்த வழியாகும். எங்கள் உயிரியல் ஆய்வகம் பாதுகாக்கப்பட்ட மாதிரிகள், ஸ்லைடுகள், மாதிரிகள் மற்றும் உயிரியல் காட்சியியல் விளக்கப்படங்களால் நன்கு சீரமைக்கப்பட்டுள்ளது, இது பரிசோதனைவழி கற்றல் ஒரு சுவாரஸ்யமான வழி என்பதைக் குறிப்பிடுகிறது. மாணவர்கள் அதன் மூலம் பல புதிய விஷயங்களை கற்றுக் கொள்வதால் அதை ரசிக்கின்றனர். மாணவர்களும் ஆசிரியர்களும் தங்கள் பொருத்தமான பாடங்கள் தொடர்பான ஆழமான அறிவையும் புரிதலையும் பெற இந்த ஆய்வகங்களை பயன்படுத்துகிறார்கள். "
+        ],
+
+        [
+          "title" => "Kids Play Park",
+          "img" => "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&w=800&q=80",
+          "desc" => "A safe and fun play area with swings, slides and other equipment where younger students can enjoy recreational activities."
+        ],
+
+        [
+          "title" => "Computer Lab",
+          "img" => "https://images.unsplash.com/photo-1581092334498-1a2c1f0e6d6b?auto=format&fit=crop&w=800&q=80",
+          "desc" => "Modern computer lab with internet enabled systems helping students learn computer fundamentals, programming and digital literacy."
+        ]
+
       ];
 
       foreach($facilities as $fac){
         echo '
         <div class="col-md-4">
-          <div class="card shadow-sm h-100">
-            <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Facility">
+          <div class="card shadow-sm h-100 border-0">
+            <img src="'.$fac["img"].'" class="card-img-top" style="height:220px;object-fit:cover;" alt="'.$fac["title"].'">
             <div class="card-body">
-              <h5 class="fw-bold text-primary">'.$fac.'</h5>
-              <p>Dummy text for '.$fac.'. Replace later.</p>
+              <h5 class="fw-bold text-primary">'.$fac["title"].'</h5>
+              <p>'.$fac["desc"].'</p>
             </div>
           </div>
         </div>';
       }
       ?>
+
     </div>
   </div>
 </section>
