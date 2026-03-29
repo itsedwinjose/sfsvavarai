@@ -1,8 +1,8 @@
 <?php include("header.php"); ?>
 
-<section class="py-5 bg-light text-center">
+<section class="page-header-gradient text-center">
   <div class="container">
-    <h1 class="fw-bold text-primary">News & Events</h1>
+    <h1 class="fw-bold text-white">News & Events</h1>
     <p>Latest school events (dummy list for now).</p>
   </div>
 </section>

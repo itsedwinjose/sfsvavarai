@@ -1,8 +1,8 @@
 <?php include("header.php"); ?>
 
-<section class="py-5 bg-light text-center">
+<section class="page-header-gradient text-center">
   <div class="container">
-    <h1 class="fw-bold text-primary">Contact Us</h1>
+    <h1 class="fw-bold text-white">Contact Us</h1>
     <p>Get in touch with us (dummy form).</p>
   </div>
 </section>

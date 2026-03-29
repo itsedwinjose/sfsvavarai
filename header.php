@@ -35,7 +35,7 @@
 </div>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+<nav class="navbar navbar-expand-lg sticky-top">
   <div class="container">
     <a class="navbar-brand fw-bold text-primary" href="index.php">
       <i class="bi bi-mortarboard-fill"></i> புனித பிரான்சிஸ் மேல்நிலைப்பள்ளி, வாவறை

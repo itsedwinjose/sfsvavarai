@@ -1,8 +1,8 @@
 <?php include("header.php"); ?>
 
-<section class="py-5 bg-light text-center">
+<section class="page-header-gradient text-center">
   <div class="container">
-    <h1 class="fw-bold text-primary">Our Facilities</h1>
+    <h1 class="fw-bold text-white">Our Facilities</h1>
     <p class="lead">We provide modern infrastructure and facilities to support quality education and overall development of students.</p>
   </div>
 </section>

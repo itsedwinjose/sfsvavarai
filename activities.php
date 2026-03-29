@@ -1,8 +1,8 @@
 <?php include("header.php"); ?>
 
-<section class="py-5 bg-light text-center">
+<section class="page-header-gradient text-center">
   <div class="container">
-    <h1 class="fw-bold text-primary">School Activities</h1>
+    <h1 class="fw-bold text-white">School Activities</h1>
     <p class="lead">Our school encourages students to participate in a wide range of activities that support academic excellence, creativity and personal development.</p>
   </div>
 </section>

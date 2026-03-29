@@ -1,8 +1,8 @@
 <?php include("header.php"); ?>
 
-<section class="py-5 bg-light text-center border-bottom">
+<section class="page-header-gradient text-center">
   <div class="container">
-    <h1 class="fw-bold text-primary mb-3">Admission Information</h1>
+    <h1 class="fw-bold text-white mb-3">Admission Information</h1>
     <p class="lead mb-0">
       Parents seeking admission for their children are requested to read the following guidelines carefully.
     </p>
