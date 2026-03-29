@@ -1,8 +1,8 @@
 <?php include("header.php"); ?>
 
-<section class="py-5 bg-light text-center">
+<section class="page-header-gradient text-center">
   <div class="container">
-    <h1 class="fw-bold text-primary">Gallery</h1>
+    <h1 class="fw-bold text-white">Gallery</h1>
     <p>Dummy gallery images (replace later).</p>
   </div>
 </section>
