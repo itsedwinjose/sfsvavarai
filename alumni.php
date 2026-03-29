@@ -85,7 +85,7 @@ $alumniDataJson = json_encode($alumniData);
 
           <div class="table-responsive">
               <table class="table table-hover align-middle">
-                  <thead class="table-light">
+                  <thead class="table-dark">
                       <tr>
                           <th>Name</th>
                           <th>Email</th>
