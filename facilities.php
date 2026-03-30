@@ -3,7 +3,8 @@
 <section class="page-header-gradient text-center">
   <div class="container">
     <h1 class="fw-bold text-white">Our Facilities</h1>
-    <p class="lead">We provide modern infrastructure and facilities to support quality education and overall development of students.</p>
+    <p class="lead">We provide modern infrastructure and facilities to support quality education and overall development
+      of students.</p>
   </div>
 </section>
 
@@ -72,24 +73,18 @@
           "title" => "Kids Play Park",
           "img" => "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&w=800&q=80",
           "desc" => "A safe and fun play area with swings, slides and other equipment where younger students can enjoy recreational activities."
-        ],
-
-        [
-          "title" => "Computer Lab",
-          "img" => "https://images.unsplash.com/photo-1581092334498-1a2c1f0e6d6b?auto=format&fit=crop&w=800&q=80",
-          "desc" => "Modern computer lab with internet enabled systems helping students learn computer fundamentals, programming and digital literacy."
         ]
 
       ];
 
-      foreach($facilities as $fac){
+      foreach ($facilities as $fac) {
         echo '
         <div class="col-md-4">
           <div class="card shadow-sm h-100 border-0">
-            <img src="'.$fac["img"].'" class="card-img-top" style="height:220px;object-fit:cover;" alt="'.$fac["title"].'">
+            <img src="' . $fac["img"] . '" class="card-img-top" style="height:220px;object-fit:cover;" alt="' . $fac["title"] . '">
             <div class="card-body">
-              <h5 class="fw-bold text-primary">'.$fac["title"].'</h5>
-              <p>'.$fac["desc"].'</p>
+              <h5 class="fw-bold text-primary">' . $fac["title"] . '</h5>
+              <p>' . $fac["desc"] . '</p>
             </div>
           </div>
         </div>';
