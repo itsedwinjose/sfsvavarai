@@ -1,50 +1,22 @@
 <?php 
 include("header.php");
 
-// Prepare dynamic alumni data from CSVs
+// Only scan for available year filenames (lightweight)
 $dir = "assets/data/alumni";
-$alumniData = []; 
+$availableYears = [];
 
 if (is_dir($dir)) {
     $files = scandir($dir);
     foreach ($files as $file) {
         if (pathinfo($file, PATHINFO_EXTENSION) === 'csv') {
-            $year = pathinfo($file, PATHINFO_FILENAME);
-            $filepath = $dir . '/' . $file;
-            
-            if (($handle = fopen($filepath, "r")) !== FALSE) {
-                // Get header and skip it
-                $header = fgetcsv($handle, 1000, ",");
-                
-                while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-                    if (count($data) < 3) continue;
-                    $name = trim($data[0]);
-                    $email = trim($data[1]);
-                    $section = trim($data[2]);
-                    
-                    if (!empty($name) && !empty($section)) {
-                        if (!isset($alumniData[$year])) {
-                            $alumniData[$year] = [];
-                        }
-                        if (!isset($alumniData[$year][$section])) {
-                            $alumniData[$year][$section] = [];
-                        }
-                        $alumniData[$year][$section][] = [
-                            'name' => htmlspecialchars($name),
-                            'email' => htmlspecialchars($email)
-                        ];
-                    }
-                }
-                fclose($handle);
-            }
+            $availableYears[] = pathinfo($file, PATHINFO_FILENAME);
         }
     }
 }
 
-// Sort years descending
-krsort($alumniData);
-// Convert to JSON for the frontend
-$alumniDataJson = json_encode($alumniData);
+// Sort years descending (latest first)
+rsort($availableYears, SORT_NUMERIC);
+$yearsJson = json_encode($availableYears);
 ?>
 
 <section class="page-header-gradient text-center">
@@ -137,16 +109,17 @@ $alumniDataJson = json_encode($alumniData);
   </div>
 </section>
 
-<!-- Frontend Logic -->
+<!-- Frontend Logic (AJAX-based on-demand loading) -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    const data = <?php echo $alumniDataJson; ?>;
+    const years = <?php echo $yearsJson; ?>;
     const yearSelect = document.getElementById("filterYear");
     const sectionSelect = document.getElementById("filterSection");
     const tableBody = document.getElementById("alumniTableBody");
 
-    const years = Object.keys(data).sort((a, b) => parseInt(b) - parseInt(a));
-    
+    // Cache fetched data to avoid re-fetching
+    const cache = {};
+
     if (years.length === 0) {
         yearSelect.innerHTML = '<option>No data available</option>';
         yearSelect.disabled = true;
@@ -164,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Handle Year Change
     yearSelect.addEventListener("change", function() {
-        populateSections(this.value);
+        loadYearData(this.value);
     });
 
     // Handle Section Change
@@ -172,22 +145,58 @@ document.addEventListener("DOMContentLoaded", function() {
         renderTable(yearSelect.value, this.value);
     });
 
-    // Initial Load - default to max year (which is the first after krsort)
+    // Initial Load - default to latest year (first in the sorted array)
     yearSelect.value = years[0];
-    populateSections(years[0]);
+    loadYearData(years[0]);
 
-    function populateSections(year) {
-        sectionSelect.innerHTML = "";
-        if (!data[year]) return;
-        
-        const sections = Object.keys(data[year]).sort();
-        if (sections.length === 0) {
-            sectionSelect.innerHTML = '<option value="">No Sections</option>';
-            renderTable(year, null);
+    function loadYearData(year) {
+        // Show loading state
+        sectionSelect.innerHTML = '<option value="">Loading...</option>';
+        sectionSelect.disabled = true;
+        tableBody.innerHTML = '<tr><td colspan="2" class="text-center text-muted"><div class="spinner-border spinner-border-sm text-primary me-2" role="status"></div>Loading alumni data...</td></tr>';
+
+        // Return from cache if available
+        if (cache[year]) {
+            populateSections(year, cache[year]);
             return;
         }
 
-        sections.forEach(sec => {
+        // AJAX call to fetch data for the selected year
+        fetch("api_alumni.php?year=" + encodeURIComponent(year))
+            .then(response => {
+                if (!response.ok) throw new Error("Failed to load data.");
+                return response.json();
+            })
+            .then(result => {
+                if (result.error) {
+                    tableBody.innerHTML = '<tr><td colspan="2" class="text-center text-danger">' + result.error + '</td></tr>';
+                    sectionSelect.innerHTML = '<option value="">No Sections</option>';
+                    sectionSelect.disabled = false;
+                    return;
+                }
+                cache[year] = result.sections;
+                populateSections(year, result.sections);
+            })
+            .catch(err => {
+                tableBody.innerHTML = '<tr><td colspan="2" class="text-center text-danger">Error loading data. Please try again.</td></tr>';
+                sectionSelect.innerHTML = '<option value="">Error</option>';
+                sectionSelect.disabled = false;
+                console.error(err);
+            });
+    }
+
+    function populateSections(year, sections) {
+        sectionSelect.innerHTML = "";
+        sectionSelect.disabled = false;
+
+        const sectionKeys = Object.keys(sections).sort();
+        if (sectionKeys.length === 0) {
+            sectionSelect.innerHTML = '<option value="">No Sections</option>';
+            tableBody.innerHTML = '<tr><td colspan="2" class="text-center text-muted">No records found for this year.</td></tr>';
+            return;
+        }
+
+        sectionKeys.forEach(sec => {
             let option = document.createElement("option");
             option.value = sec;
             option.textContent = "Section " + sec;
@@ -195,20 +204,21 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         // Default select first section
-        sectionSelect.value = sections[0];
-        renderTable(year, sections[0]);
+        sectionSelect.value = sectionKeys[0];
+        renderTable(year, sectionKeys[0]);
     }
 
     function renderTable(year, section) {
         tableBody.innerHTML = "";
-        
-        if (!year || !section || !data[year] || !data[year][section]) {
+        const sections = cache[year];
+
+        if (!year || !section || !sections || !sections[section]) {
             tableBody.innerHTML = '<tr><td colspan="2" class="text-center text-muted">No records found.</td></tr>';
             return;
         }
 
-        const students = data[year][section];
-        
+        const students = sections[section];
+
         if (students.length === 0) {
              tableBody.innerHTML = '<tr><td colspan="2" class="text-center text-muted">No records found.</td></tr>';
              return;
