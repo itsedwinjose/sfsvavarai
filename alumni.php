@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const sectionSelect = document.getElementById("filterSection");
     const tableBody = document.getElementById("alumniTableBody");
 
-    const years = Object.keys(data);
+    const years = Object.keys(data).sort((a, b) => parseInt(b) - parseInt(a));
     
     if (years.length === 0) {
         yearSelect.innerHTML = '<option>No data available</option>';
