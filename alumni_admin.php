@@ -95,12 +95,13 @@ $requests = $stmt->fetchAll();
       <?php if (count($requests) > 0): ?>
       <div class="table-responsive">
           <table class="table table-hover align-middle mb-0">
-              <thead class="table-dark">
+               <thead class="table-dark">
                   <tr>
                       <th>ID</th>
                       <th>Name</th>
                       <th>Email</th>
                       <th>Phone</th>
+                      <th>Profession</th>
                       <th>Passout Year</th>
                       <th>Section</th>
                       <th>Applied At</th>
@@ -114,6 +115,7 @@ $requests = $stmt->fetchAll();
                       <td class="fw-semibold"><?php echo htmlspecialchars($req['name']); ?></td>
                       <td><?php echo htmlspecialchars($req['email'] ? $req['email'] : '—'); ?></td>
                       <td><?php echo htmlspecialchars($req['phone']); ?></td>
+                      <td class="text-muted"><?php echo htmlspecialchars($req['profession'] ? $req['profession'] : '—'); ?></td>
                       <td><span class="badge bg-primary fs-6"><?php echo htmlspecialchars($req['passout_year']); ?></span></td>
                       <td>Section <?php echo htmlspecialchars($req['section']); ?></td>
                       <td class="text-muted small"><?php echo $req['created_at']; ?></td>

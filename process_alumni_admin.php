@@ -37,13 +37,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             
             // If new file, create headers
             if (!$fileExists) {
-                fputcsv($handle, ["Name", "email", "section"]);
+                fputcsv($handle, ["Name", "email", "section", "profession"]);
             }
 
             fputcsv($handle, [
                 $req['name'],
                 $req['email'],
-                $req['section']
+                $req['section'],
+                $req['profession']
             ]);
             fclose($handle);
 

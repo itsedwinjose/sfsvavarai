@@ -26,17 +26,19 @@ if (($handle = fopen($filepath, "r")) !== FALSE) {
 
     while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
         if (count($data) < 3) continue;
-        $name    = trim($data[0]);
-        $email   = trim($data[1]);
-        $section = trim($data[2]);
+        $name       = trim($data[0]);
+        $email      = trim($data[1]);
+        $section    = trim($data[2]);
+        $profession = isset($data[3]) ? trim($data[3]) : '';
 
         if (!empty($name) && !empty($section)) {
             if (!isset($sections[$section])) {
                 $sections[$section] = [];
             }
             $sections[$section][] = [
-                'name'  => htmlspecialchars($name),
-                'email' => htmlspecialchars($email)
+                'name'       => htmlspecialchars($name),
+                'email'      => htmlspecialchars($email),
+                'profession' => htmlspecialchars($profession)
             ];
         }
     }

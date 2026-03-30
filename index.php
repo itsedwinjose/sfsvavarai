@@ -94,7 +94,7 @@
     <div class="row g-4">
       <div class="col-md-4">
         <div class="card h-100 border-0" style="overflow:hidden;">
-          <img src="https://images.unsplash.com/photo-1588072432836-7fb78b179d74?auto=format&fit=crop&w=800&q=80"
+          <img src="assets/images/primary.png"
                class="card-img-top" alt="Primary" style="height:220px; object-fit:cover;">
           <div class="card-body">
             <h5 class="card-title fw-bold">Primary Section</h5>
@@ -107,7 +107,7 @@
 
       <div class="col-md-4">
         <div class="card h-100 border-0" style="overflow:hidden;">
-          <img src="https://images.unsplash.com/photo-1584697964194-7f59d3f6b2a7?auto=format&fit=crop&w=800&q=80"
+          <img src="assets/images/high_school.png"
                class="card-img-top" alt="High School" style="height:220px; object-fit:cover;">
           <div class="card-body">
             <h5 class="card-title fw-bold">High School</h5>
@@ -120,7 +120,7 @@
 
       <div class="col-md-4">
         <div class="card h-100 border-0" style="overflow:hidden;">
-          <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80"
+          <img src="assets/images/higher_secondary.png"
                class="card-img-top" alt="Higher Secondary" style="height:220px; object-fit:cover;">
           <div class="card-body">
             <h5 class="card-title fw-bold">Higher Secondary</h5>
@@ -153,7 +153,7 @@
         <p>Follow us on social media for latest updates.</p>
 
         <a href="#" class="btn btn-outline-primary me-2 mb-2"><i class="bi bi-facebook"></i> Facebook</a>
-        <a href="#" class="btn btn-outline-primary me-2 mb-2"><i class="bi bi-youtube"></i> YouTube</a>
+        <a href="https://www.youtube.com/@St.FrancisHSS.SchoolVavarai/" class="btn btn-outline-primary me-2 mb-2" target="_blank"><i class="bi bi-youtube"></i> YouTube</a>
         <a href="#" class="btn btn-outline-primary me-2 mb-2"><i class="bi bi-instagram"></i> Instagram</a>
         <a href="#" class="btn btn-outline-primary mb-2"><i class="bi bi-twitter-x"></i> Twitter</a>
       </div>

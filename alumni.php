@@ -100,6 +100,11 @@ $yearsJson = json_encode($availableYears);
                 </div>
             </div>
 
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Profession</label>
+              <input type="text" name="profession" class="form-control" placeholder="Eg: Engineer, Teacher, Doctor">
+            </div>
+
             <button type="submit" class="btn btn-primary w-100 fw-bold">Submit Registration</button>
           </form>
         </div>
@@ -229,7 +234,7 @@ document.addEventListener("DOMContentLoaded", function() {
             let tdName = document.createElement("td");
             tdName.className = "fw-medium";
             tdName.textContent = student.name;
-            
+
             let tdEmail = document.createElement("td");
             tdEmail.className = "text-muted";
             tdEmail.textContent = student.email ? student.email : "—";

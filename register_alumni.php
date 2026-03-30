@@ -7,11 +7,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $phone = trim($_POST['phone'] ?? '');
     $passout_year = trim($_POST['passout_year'] ?? '');
     $section = trim(strtoupper($_POST['section'] ?? ''));
+    $profession = trim($_POST['profession'] ?? '');
 
     if (!empty($name) && !empty($phone) && !empty($passout_year) && !empty($section)) {
         
-        $sql = "INSERT INTO alumni_requests (name, email, phone, passout_year, section, status) 
-                VALUES (:name, :email, :phone, :passout_year, :section, 'pending')";
+        $sql = "INSERT INTO alumni_requests (name, email, phone, passout_year, section, profession, status) 
+                VALUES (:name, :email, :phone, :passout_year, :section, :profession, 'pending')";
         
         $stmt = $pdo->prepare($sql);
         $stmt->execute([
@@ -19,7 +20,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             ':email' => $email,
             ':phone' => $phone,
             ':passout_year' => $passout_year,
-            ':section' => $section
+            ':section' => $section,
+            ':profession' => $profession
         ]);
         
         // Redirect back with success message

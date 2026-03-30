@@ -29,7 +29,7 @@
     <div>
       <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
       <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
-      <a href="#" class="text-white me-3"><i class="bi bi-youtube"></i></a>
+      <a href="https://www.youtube.com/@St.FrancisHSS.SchoolVavarai/" class="text-white me-3" target="_blank"><i class="bi bi-youtube"></i></a>
       <a href="#" class="text-white"><i class="bi bi-twitter-x"></i></a>
     </div>
   </div>
