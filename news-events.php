@@ -21,11 +21,22 @@
         "Christmas Celebration"
       ];
 
+      $eventImages = [
+        "School Day" => "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80",
+        "Sports Day" => "assets/images/sports-day.jpeg",
+        "Blessing Day" => "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80",
+        "Yoga Day" => "assets/images/yoga-day.jpeg",
+        "Independence Day" => "assets/images/independence-day.jpeg",
+        "Teachers Day" => "assets/images/teachers-day.jpeg",
+        "Christmas Celebration" => "assets/images/christmas-day.jpeg"
+      ];
+
       foreach($events as $event){
+        $image = $eventImages[$event] ?? "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80";
         echo '
         <div class="col-md-4">
           <div class="card shadow-sm h-100">
-            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Event">
+            <img src="'.$image.'" class="card-img-top" alt="Event">
             <div class="card-body">
               <h5 class="fw-bold text-primary">'.$event.'</h5>
               <p>Dummy event details for '.$event.'. Replace later.</p>

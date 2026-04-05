@@ -59,7 +59,7 @@
 
         [
           "title" => "Smart Classrooms",
-          "img" => "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80",
+          "img" => "assets/images/smart-class.jpeg",
           "desc" => "Spacious and well ventilated classrooms equipped with digital learning tools help create an interactive and engaging learning environment."
         ],
 
