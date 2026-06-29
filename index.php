@@ -134,6 +134,22 @@
   </div>
 </section>
 
+<!-- Photo Gallery -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-6">
+        <img src="assets/images/other/WhatsApp Image 2026-05-21 at 23.01.38.jpeg" 
+             class="img-fluid rounded shadow-sm" alt="School Photo" style="width:100%; height:auto;">
+      </div>
+      <div class="col-md-6">
+        <img src="assets/images/other/WhatsApp Image 2026-05-21 at 23.01.39.jpeg" 
+             class="img-fluid rounded shadow-sm" alt="School Photo" style="width:100%; height:auto;">
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Address & Social Media -->
 <section class="py-5" style="background: var(--clr-cream);">
   <div class="container">
